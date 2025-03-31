@@ -9,10 +9,15 @@ import PresidentScreen from "./screens/PresidentScreen";
 import CandidateScreen from "./screens/CandidateScreen";
 import Ballot from "./screens/Ballot";
 import AdministrationProgress from "./screens/administrationprogress";
+import Compare from "./screens/Compare"
+import AddCandidate from "./screens/AddCandidate";
+
 export type StackParamList = {
     Home: undefined;
     President: { category: string };
     Candidate: { name: string; location: string; party: string; experience: string; image: ImageSourcePropType, age: number };
+    AddCandidate: undefined; // If no params are needed
+
 };
 
 const Stack = createNativeStackNavigator<StackParamList>();
@@ -59,7 +64,7 @@ function BottomTabs() {
         >
             <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
             <Tab.Screen name="Ballot" component={Ballot} options={{ headerShown: false }} />
-            <Tab.Screen name="Compare" component={HomeScreen} options={{ headerShown: false }} />
+            <Tab.Screen name="Compare" component={Compare} options={{ headerShown: false }} />
             <Tab.Screen name="Information" component={AdministrationProgress} options={{ headerShown: false }} />
             <Tab.Screen name="Profile" component={HomeScreen} options={{ headerShown: false }} />
         </Tab.Navigator>
@@ -73,6 +78,7 @@ export default function Navigation() {
                 <Stack.Screen name="Home" component={BottomTabs} />
                 <Stack.Screen name="President" component={PresidentScreen} />
                 <Stack.Screen name="Candidate" component={CandidateScreen} />
+                <Stack.Screen name="AddCandidate" component={AddCandidate} />
             </Stack.Navigator>
         </NavigationContainer>
     );
