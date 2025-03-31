@@ -30,53 +30,54 @@ const positions: Position[] = [
     {
         title: "President",
         candidates: [
-            { name: "Candidate A", image: require("../assets/c2.png") },
-            { name: "Candidate B", image: require("../assets/c2.png") }
+            { name: "Juan Dela Cruz", image: require("../assets/c2.png") },
+            { name: "Maria Santos", image: require("../assets/c2.png") }
         ]
     },
     {
         title: "Vice-President",
         candidates: [
-            { name: "Candidate C", image: require("../assets/c2.png") },
-            { name: "Candidate D", image: require("../assets/c2.png") }
+            { name: "Jose Rizal", image: require("../assets/c2.png") },
+            { name: "Andrea Bonifacio", image: require("../assets/c2.png") }
         ]
     },
     {
         title: "Senator",
         candidates: [
-            { name: "Candidate E", image: require("../assets/c2.png") },
-            { name: "Candidate F", image: require("../assets/c2.png") }
+            { name: "Miguel Castillo", image: require("../assets/c2.png") },
+            { name: "Isabela Mercado", image: require("../assets/c2.png") }
         ]
     },
     {
         title: "Governor",
         candidates: [
-            { name: "Candidate G", image: require("../assets/c2.png") },
-            { name: "Candidate H", image: require("../assets/c2.png") }
+            { name: "Antonio Villanueva", image: require("../assets/c2.png") },
+            { name: "Catherine Reyes", image: require("../assets/c2.png") }
         ]
     },
     {
         title: "Vice-Governor",
         candidates: [
-            { name: "Candidate I", image: require("../assets/c2.png") },
-            { name: "Candidate J", image: require("../assets/c2.png") }
+            { name: "Ramon Fernandez", image: require("../assets/c2.png") },
+            { name: "Angela Bautista", image: require("../assets/c2.png") }
         ]
     },
     {
         title: "Mayor",
         candidates: [
-            { name: "Candidate K", image: require("../assets/c2.png") },
-            { name: "Candidate L", image: require("../assets/c2.png") }
+            { name: "Ricardo Mendoza", image: require("../assets/c2.png") },
+            { name: "Lourdes Navarro", image: require("../assets/c2.png") }
         ]
     },
     {
         title: "Vice-Mayor",
         candidates: [
-            { name: "Candidate M", image: require("../assets/c2.png") },
-            { name: "Candidate N", image: require("../assets/c2.png") }
+            { name: "Carlos Santiago", image: require("../assets/c2.png") },
+            { name: "Feliza Aquino", image: require("../assets/c2.png") }
         ]
     }
-];
+]
+;
 
 const Ballot: React.FC = () => {
     const [expanded, setExpanded] = useState<{ [key: string]: boolean }>({});

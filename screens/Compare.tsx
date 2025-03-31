@@ -10,7 +10,7 @@ const candidates = [
         key: "1", 
         label: "Carlos Mendoza", 
         image: require("../assets/c2.png"),
-        education: "Harvard University",
+        education: "University of the Philippines",
         experience: "Senator - 8 years",
         legislativeWork: "Proposed 15 bills, passed 7"
     },
@@ -18,9 +18,33 @@ const candidates = [
         key: "2", 
         label: "Maria Santos", 
         image: require("../assets/c2.png"),
-        education: "Yale University",
+        education: "Ateneo de Manila University",
         experience: "Governor - 4 years",
         legislativeWork: "Authored 10 policies, passed 6"
+    },
+    { 
+        key: "3", 
+        label: "Jose Ramirez", 
+        image: require("../assets/c2.png"),
+        education: "De La Salle University",
+        experience: "Mayor - 6 years",
+        legislativeWork: "Implemented 12 city projects, passed 8 ordinances"
+    },
+    { 
+        key: "4", 
+        label: "Angela Dela Cruz", 
+        image: require("../assets/c2.png"),
+        education: "University of Santo Tomas",
+        experience: "Representative - 5 years",
+        legislativeWork: "Proposed 18 bills, passed 9"
+    },
+    { 
+        key: "5", 
+        label: "Fernando Reyes", 
+        image: require("../assets/c2.png"),
+        education: "Polytechnic University of the Philippines",
+        experience: "Vice Governor - 3 years",
+        legislativeWork: "Drafted 7 policies, co-authored 5 laws"
     }
 ];
 

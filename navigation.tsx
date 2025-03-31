@@ -8,16 +8,19 @@ import HomeScreen from "./screens/HomeScreen";
 import PresidentScreen from "./screens/PresidentScreen";
 import CandidateScreen from "./screens/CandidateScreen";
 import Ballot from "./screens/Ballot";
+import LoginScreen from "./screens/LoginScreen";
+import SignupScreen from "./screens/SignupScreen";
+import Profile from "./screens/ProfileScreen"
+
 import AdministrationProgress from "./screens/administrationprogress";
 import Compare from "./screens/Compare"
-import AddCandidate from "./screens/AddCandidate";
+import AddCandidate from "./screens/AddCandidate"; 
+import ProfileScreen from "./screens/ProfileScreen";
 
 export type StackParamList = {
     Home: undefined;
     President: { category: string };
     Candidate: { name: string; location: string; party: string; experience: string; image: ImageSourcePropType, age: number };
-    AddCandidate: undefined; // If no params are needed
-
 };
 
 const Stack = createNativeStackNavigator<StackParamList>();
@@ -66,7 +69,7 @@ function BottomTabs() {
             <Tab.Screen name="Ballot" component={Ballot} options={{ headerShown: false }} />
             <Tab.Screen name="Compare" component={Compare} options={{ headerShown: false }} />
             <Tab.Screen name="Information" component={AdministrationProgress} options={{ headerShown: false }} />
-            <Tab.Screen name="Profile" component={HomeScreen} options={{ headerShown: false }} />
+            <Tab.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }} />
         </Tab.Navigator>
     );
 }
@@ -75,10 +78,13 @@ export default function Navigation() {
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
+                <Stack.Screen name ="Login" component = {LoginScreen} />
+                <Stack.Screen name="Signup" component={SignupScreen} />
                 <Stack.Screen name="Home" component={BottomTabs} />
                 <Stack.Screen name="President" component={PresidentScreen} />
                 <Stack.Screen name="Candidate" component={CandidateScreen} />
                 <Stack.Screen name="AddCandidate" component={AddCandidate} />
+                <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );
