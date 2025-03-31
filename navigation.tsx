@@ -12,10 +12,11 @@ import LoginScreen from "./screens/LoginScreen";
 import SignupScreen from "./screens/SignupScreen";
 
 import AdministrationProgress from "./screens/administrationprogress";
+import ProfileScreen from "./screens/ProfileScreen";
 export type StackParamList = {
     Home: undefined;
     President: { category: string };
-    Candidate: { name: string; location: string; party: string; experience: string; image: ImageSourcePropType, age: number };
+    Candidate: { name: string; location: string; party: string; experience: string; image: ImageSourcePropType, age: number, pollingStation?: string, district?: string, electionDate?:number, status?: string};
     Login: undefined; 
     Signup: undefined;
 };
@@ -66,7 +67,7 @@ function BottomTabs() {
             <Tab.Screen name="Ballot" component={Ballot} options={{ headerShown: false }} />
             <Tab.Screen name="Compare" component={HomeScreen} options={{ headerShown: false }} />
             <Tab.Screen name="Information" component={AdministrationProgress} options={{ headerShown: false }} />
-            <Tab.Screen name="Profile" component={HomeScreen} options={{ headerShown: false }} />
+            <Tab.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }} />
         </Tab.Navigator>
     );
 }

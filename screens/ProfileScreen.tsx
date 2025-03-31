@@ -53,7 +53,6 @@ const ProfileScreen = () => {
         <View style={styles.container}>
             <View style={styles.topSection}>
                 <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-                    <Text style={styles.backButtonText}>← Back</Text>
                 </TouchableOpacity>
 
       {/*Name of the user */}
