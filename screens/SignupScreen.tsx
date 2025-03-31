@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Alert } from 'react-native';
-import { Dimensions } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Alert, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons, SimpleLineIcons } from "@expo/vector-icons";
 import { useNavigation } from '@react-navigation/native';
@@ -21,6 +20,8 @@ const SignupScreen = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+    const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] = useState(false);
 
     const handleSignup = () => {
         if (!firstName || !lastName || !email || !password || !confirmPassword) {
@@ -45,7 +46,7 @@ const SignupScreen = () => {
                 <View style={styles.formContainer}>
                     {/* First Name */}
                     <View style={styles.inputContainer}>
-                        <Ionicons name={"person-outline"} size={30} color={"gray"} />
+                        <Ionicons name="person-outline" size={30} color="gray" />
                         <TextInput
                             style={styles.input}
                             placeholder="First Name"
@@ -56,7 +57,7 @@ const SignupScreen = () => {
 
                     {/* Last Name */}
                     <View style={styles.inputContainer}>
-                        <Ionicons name={"person-outline"} size={30} color={"gray"} />
+                        <Ionicons name="person-outline" size={30} color="gray" />
                         <TextInput
                             style={styles.input}
                             placeholder="Last Name"
@@ -67,7 +68,7 @@ const SignupScreen = () => {
 
                     {/* Email */}
                     <View style={styles.inputContainer}>
-                        <Ionicons name={"mail-outline"} size={30} color={"gray"} />
+                        <Ionicons name="mail-outline" size={30} color="gray" />
                         <TextInput
                             style={styles.input}
                             placeholder="Email"
@@ -80,26 +81,32 @@ const SignupScreen = () => {
 
                     {/* Password */}
                     <View style={styles.inputContainer}>
-                        <SimpleLineIcons name={"lock"} size={30} color={"gray"} />
+                        <SimpleLineIcons name="lock" size={30} color="gray" />
                         <TextInput
                             style={styles.input}
                             placeholder="Password"
                             value={password}
                             onChangeText={setPassword}
-                            secureTextEntry={true}
+                            secureTextEntry={!isPasswordVisible}
                         />
+                        <TouchableOpacity onPress={() => setIsPasswordVisible(!isPasswordVisible)}>
+                            <Ionicons name={isPasswordVisible ? "eye-off" : "eye"} size={25} color="gray" />
+                        </TouchableOpacity>
                     </View>
 
                     {/* Confirm Password */}
                     <View style={styles.inputContainer}>
-                        <SimpleLineIcons name={"lock"} size={30} color={"gray"} />
+                        <SimpleLineIcons name="lock" size={30} color="gray" />
                         <TextInput
                             style={styles.input}
                             placeholder="Confirm Password"
                             value={confirmPassword}
                             onChangeText={setConfirmPassword}
-                            secureTextEntry={true}
+                            secureTextEntry={!isConfirmPasswordVisible}
                         />
+                        <TouchableOpacity onPress={() => setIsConfirmPasswordVisible(!isConfirmPasswordVisible)}>
+                            <Ionicons name={isConfirmPasswordVisible ? "eye-off" : "eye"} size={25} color="gray" />
+                        </TouchableOpacity>
                     </View>
 
                     {/* Sign Up Button */}
