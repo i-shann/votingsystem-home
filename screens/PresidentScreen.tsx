@@ -79,7 +79,7 @@ const PresidentScreen = () => {
 const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
-        backgroundColor: "#1F509A", // 🔵 Blue header background extends to status bar
+        backgroundColor: "#", // 🔵 Blue header background extends to status bar
     },
     headerContainer: {
         backgroundColor: "#1F509A",

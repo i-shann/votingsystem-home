@@ -8,11 +8,16 @@ import HomeScreen from "./screens/HomeScreen";
 import PresidentScreen from "./screens/PresidentScreen";
 import CandidateScreen from "./screens/CandidateScreen";
 import Ballot from "./screens/Ballot";
+import LoginScreen from "./screens/LoginScreen";
+import SignupScreen from "./screens/SignupScreen";
+
 import AdministrationProgress from "./screens/administrationprogress";
 export type StackParamList = {
     Home: undefined;
     President: { category: string };
     Candidate: { name: string; location: string; party: string; experience: string; image: ImageSourcePropType, age: number };
+    Login: undefined; 
+    Signup: undefined;
 };
 
 const Stack = createNativeStackNavigator<StackParamList>();
@@ -70,6 +75,8 @@ export default function Navigation() {
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
+                <Stack.Screen name ="Login" component = {LoginScreen} />
+                <Stack.Screen name="Signup" component={SignupScreen} />
                 <Stack.Screen name="Home" component={BottomTabs} />
                 <Stack.Screen name="President" component={PresidentScreen} />
                 <Stack.Screen name="Candidate" component={CandidateScreen} />
