@@ -13,14 +13,12 @@ import SignupScreen from "./screens/SignupScreen";
 import Profile from "./screens/ProfileScreen"
 
 import AdministrationProgress from "./screens/administrationprogress";
-import Compare from "./screens/Compare"
-import AddCandidate from "./screens/AddCandidate"; 
-import ProfileScreen from "./screens/ProfileScreen";
-
 export type StackParamList = {
     Home: undefined;
     President: { category: string };
     Candidate: { name: string; location: string; party: string; experience: string; image: ImageSourcePropType, age: number };
+    Login: undefined; 
+    Signup: undefined;
 };
 
 const Stack = createNativeStackNavigator<StackParamList>();
