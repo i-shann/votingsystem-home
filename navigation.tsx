@@ -10,7 +10,9 @@ import CandidateScreen from "./screens/CandidateScreen";
 import Ballot from "./screens/Ballot";
 import LoginScreen from "./screens/LoginScreen";
 import SignupScreen from "./screens/SignupScreen";
-import Profile from "./screens/ProfileScreen"
+import AddCandidate from "./screens/AddCandidate";
+import Compare from "./screens/Compare";
+import ProfileScreen from "./screens/ProfileScreen";
 
 import AdministrationProgress from "./screens/administrationprogress";
 export type StackParamList = {
