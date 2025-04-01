@@ -18,9 +18,11 @@ import AdministrationProgress from "./screens/administrationprogress";
 export type StackParamList = {
     Home: undefined;
     President: { category: string };
-    Candidate: { name: string; location: string; party: string; experience: string; image: ImageSourcePropType, age: number };
+    Candidate: { name: string; location: string; party: string; experience: string; image: ImageSourcePropType, age: number, pollingStation?: string, district?: string, electionDate?:number, status?: string};
     Login: undefined; 
     Signup: undefined;
+    AddCandidate: undefined;
+    ProfileScreen: undefined; 
 };
 
 const Stack = createNativeStackNavigator<StackParamList>();
